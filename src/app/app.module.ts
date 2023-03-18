@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/page/menu/menu.component';
 import { UserPipe } from './pipes/user.pipe'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProdutoComponent } from './components/produto/produto.component';
   
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     MenuComponent,
     UserPipe,
+    ProdutoComponent,
    
   ],
   imports: [

@@ -13,7 +13,7 @@
               <label for="exampleInputPassword1" class="form-label">Senha</label>
               <input formControlName="senha" type="password" required [(ngModel)]="senha" name="senha" class="form-control bg-info bg-opacity-10 border border-primary" id="exampleInputPassword1">
               <span class="text-danger font-weight-light font-italic small" *ngIf="form.controls['senha'].errors">
-                {{ form.controls['senha'].errors['required'] ? "Campo obrigatório" : (form.controls['senha'].errors['min'] ? "Senha Invalida" : (form.controls['senha'].errors['pattern'] ? "Somente numeros" : "")) }}
+                {{ form.controls['senha'].errors['required'] ? "Campo obrigatório" : (form.controls['senha'].errors['min'] ? "Minimo 8 caracter" : (form.controls['senha'].errors['pattern'] ? "Somente numeros" : "")) }}
              </span>
             </div>
           <p class="small"><a class="text-primary" href="forget-password.html">Esqueceu a senha?</a></p>
