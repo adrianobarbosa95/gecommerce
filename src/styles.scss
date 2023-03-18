@@ -2,3 +2,12 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+body {
+  background-image: linear-gradient(109.6deg, rgba(61, 237, 253, 1) 44.2%, rgba(3, 136, 238, 1) 95.6%);
+}
+
+#container{
+  background: rgb(255, 254, 254);
+}

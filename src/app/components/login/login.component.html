@@ -1,0 +1,31 @@
+<div class="vh-100 d-flex justify-content-center align-items-center">
+  <div class="col-md-4 p-5 shadow-sm border rounded-5 border-primary">
+      <h2 class="text-center mb-4 text-primary">Entrar</h2>
+      <form method="get" (ngSubmit) = "onSubmit()" [formGroup]="form">
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input  formControlName="email" type="email" required [(ngModel)]="email" name="email" class="form-control bg-info bg-opacity-10 border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <span class="text-danger font-weight-light font-italic small" *ngIf="form.controls['email'].errors">  
+               {{ form.controls['email'].errors['required'] ? "Campo obrigatório" : (form.controls['email'].errors['email'] ? "Email Invalido" : "") }}
+             </span>
+            </div>
+          <div class="mb-3 ">
+              <label for="exampleInputPassword1" class="form-label">Senha</label>
+              <input formControlName="senha" type="password" required [(ngModel)]="senha" name="senha" class="form-control bg-info bg-opacity-10 border border-primary" id="exampleInputPassword1">
+              <span class="text-danger font-weight-light font-italic small" *ngIf="form.controls['senha'].errors">
+                {{ form.controls['senha'].errors['required'] ? "Campo obrigatório" : (form.controls['senha'].errors['min'] ? "Senha Invalida" : (form.controls['senha'].errors['pattern'] ? "Somente numeros" : "")) }}
+             </span>
+            </div>
+          <p class="small"><a class="text-primary" href="forget-password.html">Esqueceu a senha?</a></p>
+          <div class="d-grid">
+              <button class="btn btn-primary" type="submit"  [disabled]="!form.valid">Entrar</button>
+          </div>
+      </form>
+      <div class="mt-3">
+          <p class="mb-0  text-center">Não tem conta? <a href="signup.html"
+                  class="text-primary fw-bold">Cadastrar
+                  </a></p>
+      </div>
+     
+  </div>
+</div>
