@@ -12,6 +12,8 @@ import { MenuComponent } from './components/page/menu/menu.component';
 import { UserPipe } from './pipes/user.pipe'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { FilterPipe } from './pipes/filter.pipe';
   
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProdutoComponent } from './components/produto/produto.component';
     MenuComponent,
     UserPipe,
     ProdutoComponent,
+    CadastroComponent,
+    FilterPipe,
    
   ],
   imports: [

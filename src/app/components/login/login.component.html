@@ -1,7 +1,7 @@
 <div class="vh-100 d-flex justify-content-center align-items-center">
   <div class="col-md-4 p-5 shadow-sm border rounded-5 border-primary">
       <h2 class="text-center mb-4 text-primary">Entrar</h2>
-      <form method="get" (ngSubmit) = "onSubmit()" [formGroup]="form">
+      <form   (ngSubmit) = "onSubmit()" [formGroup]="form">
           <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
               <input  formControlName="email" type="email" required [(ngModel)]="email" name="email" class="form-control bg-info bg-opacity-10 border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">

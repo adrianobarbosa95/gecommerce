@@ -1,30 +1,25 @@
+<div class="table table-small">
+  <input type="text" [(ngModel)]='busca' name="busca" placeholder="Nome do produto..." (ngModelChange)="change($event)">
+
+</div>
 <table class="table table-small">
+
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Primeiro</th>
-      <th scope="col">Último</th>
-      <th scope="col">Nickname</th>
+      <th scope="col">ID</th>
+      <th scope="col">NOME</th>
+      <th scope="col">QUANTIDADE</th>
+      <th scope="col">PREÇO</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+
+    <tr *ngFor="let produto of produtos">
+      <th scope="row">{{produto.id}}</th>
+      <td>{{produto.nome}}</td>
+      <td>{{produto.quantidade}}</td>
+      <td>R$ {{produto.preco}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
   </tbody>
 </table>
